@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+}
+
+body {
+  background: #0f0f1a;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.pixel-canvas {
+  cursor: crosshair;
+  image-rendering: pixelated;
+}
+
+.block-occupied { cursor: pointer; }
+.block-free { cursor: cell; }
+.block-mine { cursor: grab; }
+
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.token-badge {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.auction-timer {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 4px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 2px; }
